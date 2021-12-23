@@ -1,0 +1,107 @@
+|RegistradorMultiplicador
+Multiplicador[0] => FlipFlop:Stage00.D
+Multiplicador[1] => FlipFlop:Stage01.D
+Multiplicador[2] => FlipFlop:Stage02.D
+Multiplicador[3] => FlipFlop:Stage03.D
+Multiplicador[4] => FlipFlop:Stage04.D
+Multiplicador[5] => FlipFlop:Stage05.D
+Multiplicador[6] => FlipFlop:Stage06.D
+Multiplicador[7] => FlipFlop:Stage07.D
+Enable => FlipFlop:Stage07.Enable
+Enable => FlipFlop:Stage06.Enable
+Enable => FlipFlop:Stage05.Enable
+Enable => FlipFlop:Stage04.Enable
+Enable => FlipFlop:Stage03.Enable
+Enable => FlipFlop:Stage02.Enable
+Enable => FlipFlop:Stage01.Enable
+Enable => FlipFlop:Stage00.Enable
+Reset => FlipFlop:Stage07.Resetn
+Reset => FlipFlop:Stage06.Resetn
+Reset => FlipFlop:Stage05.Resetn
+Reset => FlipFlop:Stage04.Resetn
+Reset => FlipFlop:Stage03.Resetn
+Reset => FlipFlop:Stage02.Resetn
+Reset => FlipFlop:Stage01.Resetn
+Reset => FlipFlop:Stage00.Resetn
+Clock => FlipFlop:Stage07.Clock
+Clock => FlipFlop:Stage06.Clock
+Clock => FlipFlop:Stage05.Clock
+Clock => FlipFlop:Stage04.Clock
+Clock => FlipFlop:Stage03.Clock
+Clock => FlipFlop:Stage02.Clock
+Clock => FlipFlop:Stage01.Clock
+Clock => FlipFlop:Stage00.Clock
+Q[0] << FlipFlop:Stage00.Q
+Q[1] << FlipFlop:Stage01.Q
+Q[2] << FlipFlop:Stage02.Q
+Q[3] << FlipFlop:Stage03.Q
+Q[4] << FlipFlop:Stage04.Q
+Q[5] << FlipFlop:Stage05.Q
+Q[6] << FlipFlop:Stage06.Q
+Q[7] << FlipFlop:Stage07.Q
+
+
+|RegistradorMultiplicador|FlipFlop:Stage07
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage06
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage05
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage04
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage03
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage02
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage01
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorMultiplicador|FlipFlop:Stage00
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

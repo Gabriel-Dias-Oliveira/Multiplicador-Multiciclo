@@ -1,0 +1,37 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+ENTITY RegistradorProduto IS
+	PORT ( 
+			Produto: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+			Reset, Clock : IN STD_LOGIC;
+			Q : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0) 
+			);
+END RegistradorProduto;
+
+ARCHITECTURE Structure OF RegistradorProduto IS
+	COMPONENT FlipFlop
+			PORT ( 
+				D, Resetn, Clock: IN STD_LOGIC;
+				Q: OUT STD_LOGIC
+			);		
+	END COMPONENT ;
+
+	BEGIN
+		Stage15: FlipFlop PORT MAP (Produto(15), Reset, Clock, Q(15));
+		Stage14: FlipFlop PORT MAP (Produto(14), Reset, Clock, Q(14));
+		Stage13: FlipFlop PORT MAP (Produto(13), Reset, Clock, Q(13));
+		Stage12: FlipFlop PORT MAP (Produto(12), Reset, Clock, Q(12));
+		Stage11: FlipFlop PORT MAP (Produto(11), Reset, Clock, Q(11));
+		Stage10: FlipFlop PORT MAP (Produto(10), Reset, Clock, Q(10));
+		Stage09: FlipFlop PORT MAP (Produto(9), Reset, Clock, Q(9));
+		Stage08: FlipFlop PORT MAP (Produto(8), Reset, Clock, Q(8));
+		Stage07: FlipFlop PORT MAP (Produto(7), Reset, Clock, Q(7));
+		Stage06: FlipFlop PORT MAP (Produto(6), Reset, Clock, Q(6));
+		Stage05: FlipFlop PORT MAP (Produto(5), Reset, Clock, Q(5));
+		Stage04: FlipFlop PORT MAP (Produto(4), Reset, Clock, Q(4));
+		Stage03: FlipFlop PORT MAP (Produto(3), Reset, Clock, Q(3));
+		Stage02: FlipFlop PORT MAP (Produto(2), Reset, Clock, Q(2));
+		Stage01: FlipFlop PORT MAP (Produto(1), Reset, Clock, Q(1));
+		Stage00: FlipFlop PORT MAP (Produto(0), Reset, Clock, Q(0));
+END Structure ;

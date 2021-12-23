@@ -1,0 +1,38 @@
+|UnidadeControle
+Clock => y~1.DATAIN
+Resetn => y~3.DATAIN
+calcula => Selector1.IN4
+calcula => Selector0.IN2
+Multiplicando[0] => Equal0.IN15
+Multiplicando[1] => Equal0.IN14
+Multiplicando[2] => Equal0.IN13
+Multiplicando[3] => Equal0.IN12
+Multiplicando[4] => Equal0.IN11
+Multiplicando[5] => Equal0.IN10
+Multiplicando[6] => Equal0.IN9
+Multiplicando[7] => Equal0.IN8
+Multiplicando[8] => Equal0.IN7
+Multiplicando[9] => Equal0.IN6
+Multiplicando[10] => Equal0.IN5
+Multiplicando[11] => Equal0.IN4
+Multiplicando[12] => Equal0.IN3
+Multiplicando[13] => Equal0.IN2
+Multiplicando[14] => Equal0.IN1
+Multiplicando[15] => Equal0.IN0
+Multiplicador[0] => y.DATAA
+Multiplicador[0] => Equal1.IN7
+Multiplicador[0] => y.DATAA
+Multiplicador[1] => Equal1.IN6
+Multiplicador[2] => Equal1.IN5
+Multiplicador[3] => Equal1.IN4
+Multiplicador[4] => Equal1.IN3
+Multiplicador[5] => Equal1.IN2
+Multiplicador[6] => Equal1.IN1
+Multiplicador[7] => Equal1.IN0
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+Eentradas <= Eentradas.DB_MAX_OUTPUT_PORT_TYPE
+Eproduto <= Eentradas.DB_MAX_OUTPUT_PORT_TYPE
+Sentradas <= Sentradas.DB_MAX_OUTPUT_PORT_TYPE
+Sproduto <= Sentradas.DB_MAX_OUTPUT_PORT_TYPE
+
+

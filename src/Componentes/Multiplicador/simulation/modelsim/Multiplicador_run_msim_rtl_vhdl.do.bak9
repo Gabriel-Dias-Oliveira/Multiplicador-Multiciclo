@@ -1,0 +1,21 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/FlipFlop/FlipFlop.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/Multiplexador/Multiplexador.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/UnidadeControle/UnidadeControle.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/RegistradorProduto/RegistradorProduto.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/RegistradorMultiplicando/RegistradorMultiplicando.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/RegistradorMultiplicador/RegistradorMultiplicador.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/Multiplexador_16/Multiplexador_16.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/Multiplexador_8/Multiplexador_8.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/FullAdder/FullAdder.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/DeslocadorEsq/DeslocadorEsq.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/DeslocadorDir/DeslocadorDir.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/BitsAdder/BitsAdder.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado/Componentes/Multiplicador/Multiplicador.vhd}
+

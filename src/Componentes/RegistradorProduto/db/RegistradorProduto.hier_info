@@ -1,0 +1,211 @@
+|RegistradorProduto
+Produto[0] => FlipFlop:Stage00.D
+Produto[1] => FlipFlop:Stage01.D
+Produto[2] => FlipFlop:Stage02.D
+Produto[3] => FlipFlop:Stage03.D
+Produto[4] => FlipFlop:Stage04.D
+Produto[5] => FlipFlop:Stage05.D
+Produto[6] => FlipFlop:Stage06.D
+Produto[7] => FlipFlop:Stage07.D
+Produto[8] => FlipFlop:Stage08.D
+Produto[9] => FlipFlop:Stage09.D
+Produto[10] => FlipFlop:Stage10.D
+Produto[11] => FlipFlop:Stage11.D
+Produto[12] => FlipFlop:Stage12.D
+Produto[13] => FlipFlop:Stage13.D
+Produto[14] => FlipFlop:Stage14.D
+Produto[15] => FlipFlop:Stage15.D
+Enable => FlipFlop:Stage15.Enable
+Enable => FlipFlop:Stage14.Enable
+Enable => FlipFlop:Stage13.Enable
+Enable => FlipFlop:Stage12.Enable
+Enable => FlipFlop:Stage11.Enable
+Enable => FlipFlop:Stage10.Enable
+Enable => FlipFlop:Stage09.Enable
+Enable => FlipFlop:Stage08.Enable
+Enable => FlipFlop:Stage07.Enable
+Enable => FlipFlop:Stage06.Enable
+Enable => FlipFlop:Stage05.Enable
+Enable => FlipFlop:Stage04.Enable
+Enable => FlipFlop:Stage03.Enable
+Enable => FlipFlop:Stage02.Enable
+Enable => FlipFlop:Stage01.Enable
+Enable => FlipFlop:Stage00.Enable
+Reset => FlipFlop:Stage15.Resetn
+Reset => FlipFlop:Stage14.Resetn
+Reset => FlipFlop:Stage13.Resetn
+Reset => FlipFlop:Stage12.Resetn
+Reset => FlipFlop:Stage11.Resetn
+Reset => FlipFlop:Stage10.Resetn
+Reset => FlipFlop:Stage09.Resetn
+Reset => FlipFlop:Stage08.Resetn
+Reset => FlipFlop:Stage07.Resetn
+Reset => FlipFlop:Stage06.Resetn
+Reset => FlipFlop:Stage05.Resetn
+Reset => FlipFlop:Stage04.Resetn
+Reset => FlipFlop:Stage03.Resetn
+Reset => FlipFlop:Stage02.Resetn
+Reset => FlipFlop:Stage01.Resetn
+Reset => FlipFlop:Stage00.Resetn
+Clock => FlipFlop:Stage15.Clock
+Clock => FlipFlop:Stage14.Clock
+Clock => FlipFlop:Stage13.Clock
+Clock => FlipFlop:Stage12.Clock
+Clock => FlipFlop:Stage11.Clock
+Clock => FlipFlop:Stage10.Clock
+Clock => FlipFlop:Stage09.Clock
+Clock => FlipFlop:Stage08.Clock
+Clock => FlipFlop:Stage07.Clock
+Clock => FlipFlop:Stage06.Clock
+Clock => FlipFlop:Stage05.Clock
+Clock => FlipFlop:Stage04.Clock
+Clock => FlipFlop:Stage03.Clock
+Clock => FlipFlop:Stage02.Clock
+Clock => FlipFlop:Stage01.Clock
+Clock => FlipFlop:Stage00.Clock
+Q[0] << FlipFlop:Stage00.Q
+Q[1] << FlipFlop:Stage01.Q
+Q[2] << FlipFlop:Stage02.Q
+Q[3] << FlipFlop:Stage03.Q
+Q[4] << FlipFlop:Stage04.Q
+Q[5] << FlipFlop:Stage05.Q
+Q[6] << FlipFlop:Stage06.Q
+Q[7] << FlipFlop:Stage07.Q
+Q[8] << FlipFlop:Stage08.Q
+Q[9] << FlipFlop:Stage09.Q
+Q[10] << FlipFlop:Stage10.Q
+Q[11] << FlipFlop:Stage11.Q
+Q[12] << FlipFlop:Stage12.Q
+Q[13] << FlipFlop:Stage13.Q
+Q[14] << FlipFlop:Stage14.Q
+Q[15] << FlipFlop:Stage15.Q
+
+
+|RegistradorProduto|FlipFlop:Stage15
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage14
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage13
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage12
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage11
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage10
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage09
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage08
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage07
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage06
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage05
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage04
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage03
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage02
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage01
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegistradorProduto|FlipFlop:Stage00
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

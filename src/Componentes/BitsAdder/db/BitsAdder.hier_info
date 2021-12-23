@@ -1,0 +1,275 @@
+|BitsAdder
+Multiplicando[0] => FullAdder:Stage00.x
+Multiplicando[1] => FullAdder:Stage01.x
+Multiplicando[2] => FullAdder:Stage02.x
+Multiplicando[3] => FullAdder:Stage03.x
+Multiplicando[4] => FullAdder:Stage04.x
+Multiplicando[5] => FullAdder:Stage05.x
+Multiplicando[6] => FullAdder:Stage06.x
+Multiplicando[7] => FullAdder:Stage07.x
+Multiplicando[8] => FullAdder:Stage08.x
+Multiplicando[9] => FullAdder:Stage09.x
+Multiplicando[10] => FullAdder:Stage10.x
+Multiplicando[11] => FullAdder:Stage11.x
+Multiplicando[12] => FullAdder:Stage12.x
+Multiplicando[13] => FullAdder:Stage13.x
+Multiplicando[14] => FullAdder:Stage14.x
+Multiplicando[15] => FullAdder:Stage15.x
+Produto[0] => FullAdder:Stage00.y
+Produto[1] => FullAdder:Stage01.y
+Produto[2] => FullAdder:Stage02.y
+Produto[3] => FullAdder:Stage03.y
+Produto[4] => FullAdder:Stage04.y
+Produto[5] => FullAdder:Stage05.y
+Produto[6] => FullAdder:Stage06.y
+Produto[7] => FullAdder:Stage07.y
+Produto[8] => FullAdder:Stage08.y
+Produto[9] => FullAdder:Stage09.y
+Produto[10] => FullAdder:Stage10.y
+Produto[11] => FullAdder:Stage11.y
+Produto[12] => FullAdder:Stage12.y
+Produto[13] => FullAdder:Stage13.y
+Produto[14] => FullAdder:Stage14.y
+Produto[15] => FullAdder:Stage15.y
+s[0] <= FullAdder:Stage00.s
+s[1] <= FullAdder:Stage01.s
+s[2] <= FullAdder:Stage02.s
+s[3] <= FullAdder:Stage03.s
+s[4] <= FullAdder:Stage04.s
+s[5] <= FullAdder:Stage05.s
+s[6] <= FullAdder:Stage06.s
+s[7] <= FullAdder:Stage07.s
+s[8] <= FullAdder:Stage08.s
+s[9] <= FullAdder:Stage09.s
+s[10] <= FullAdder:Stage10.s
+s[11] <= FullAdder:Stage11.s
+s[12] <= FullAdder:Stage12.s
+s[13] <= FullAdder:Stage13.s
+s[14] <= FullAdder:Stage14.s
+s[15] <= FullAdder:Stage15.s
+
+
+|BitsAdder|FullAdder:Stage00
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage01
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage02
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage03
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage04
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage05
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage06
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage07
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage08
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage09
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage10
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage11
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage12
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage13
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage14
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BitsAdder|FullAdder:Stage15
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

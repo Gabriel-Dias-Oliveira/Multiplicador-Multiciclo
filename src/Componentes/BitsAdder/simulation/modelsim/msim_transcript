@@ -1,0 +1,83 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do BitsAdder_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FullAdder/FullAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:45:14 on Nov 24,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FullAdder/FullAdder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FullAdder
+# -- Compiling architecture LogicFunc of FullAdder
+# End time: 07:45:14 on Nov 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/BitsAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:45:14 on Nov 24,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/BitsAdder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BitsAdder
+# -- Compiling architecture Structure of BitsAdder
+# End time: 07:45:14 on Nov 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.fulladder
+# vsim work.fulladder 
+# Start time: 07:45:22 on Nov 24,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fulladder(logicfunc)
+vsim work.bitsadder
+# End time: 07:45:29 on Nov 24,2021, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# vsim work.bitsadder 
+# Start time: 07:45:29 on Nov 24,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.bitsadder(structure)
+# Loading work.fulladder(logicfunc)
+wave create -driver freeze -pattern constant -value 1101100000001111 -range 15 0 -starttime 0ps -endtime 1000ps sim:/bitsadder/Multiplicando
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# fulladder
+wave create -driver freeze -pattern constant -value 0000100000110101 -range 15 0 -starttime 500ps -endtime 1000ps sim:/bitsadder/Multiplicando
+# /bitsadder/Multiplicando already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave modify -driver freeze -pattern constant -value 0000100000110101 -range 15 0 -starttime 500ps -endtime 1000ps Edit:/bitsadder/Multiplicando
+# fulladder
+wave create -driver freeze -pattern constant -value 0101000111011110 -range 15 0 -starttime 0ps -endtime 1000ps sim:/bitsadder/Produto
+# fulladder
+wave modify -driver freeze -pattern constant -value 1010011000011101 -range 15 0 -starttime 500ps -endtime 1000ps Edit:/bitsadder/Produto
+# fulladder
+add wave -position insertpoint  \
+sim:/bitsadder/s
+run
+wave modify -driver freeze -pattern constant -value 1001000000001111 -range 15 0 -starttime 0ps -endtime 500ps Edit:/bitsadder/Multiplicando
+# fulladder
+restart
+run
+wave modify -driver freeze -pattern constant -value 1001000101101111 -range 15 0 -starttime 250ps -endtime 500ps Edit:/bitsadder/Multiplicando
+# fulladder
+wave modify -driver freeze -pattern constant -value 0101010111010010 -range 15 0 -starttime 250ps -endtime 1000ps Edit:/bitsadder/Produto
+# fulladder
+wave modify -driver freeze -pattern constant -value 0101000111011110 -range 15 0 -starttime 500ps -endtime 1000ps Edit:/bitsadder/Produto
+# fulladder
+restart
+run
+# End time: 07:54:26 on Nov 24,2021, Elapsed time: 0:08:57
+# Errors: 1, Warnings: 0
+wave editwrite -file C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/simulation/modelsim/wave.do

@@ -1,0 +1,517 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplicador/simulation/modelsim
+Ebitsadder
+Z1 w1637600055
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/BitsAdder.vhd
+Z5 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/BitsAdder.vhd
+l0
+L4
+V7@l92MROOS[UnljY[3YTj0
+!s100 5gDTR8:e1k67YJe`Ygd8[1
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1637760309
+!i10b 1
+Z8 !s108 1637760309.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/BitsAdder.vhd|
+Z10 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/BitsAdder/BitsAdder.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+DEx4 work 9 bitsadder 0 22 7@l92MROOS[UnljY[3YTj0
+l22
+L13
+VGn?]NfAbRj4]>bZR?Yd?g0
+!s100 Z9;@57F_CU6BT65inoh?=2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edeslocadordir
+Z13 w1636373452
+R2
+R3
+R0
+Z14 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorDir/DeslocadorDir.vhd
+Z15 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorDir/DeslocadorDir.vhd
+l0
+L4
+Vb8aEing?jHgHTfB5]z3gz0
+!s100 YkOKZf1lF@Bk<^K0dMaM73
+R6
+31
+Z16 !s110 1637760308
+!i10b 1
+Z17 !s108 1637760308.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorDir/DeslocadorDir.vhd|
+Z19 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorDir/DeslocadorDir.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 13 deslocadordir 0 22 b8aEing?jHgHTfB5]z3gz0
+l14
+L13
+V602c]P9gFKTFD:I4>@OJB2
+!s100 Hjz3infcm5KNCAcHlik[<2
+R6
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Edeslocadoresq
+Z20 w1636373972
+R2
+R3
+R0
+Z21 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorEsq/DeslocadorEsq.vhd
+Z22 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorEsq/DeslocadorEsq.vhd
+l0
+L4
+V5=5GI2W5Hz68?^E=Qo05W1
+!s100 NbbdXLWdjEY0?TCXOCN[d3
+R6
+31
+R16
+!i10b 1
+R17
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorEsq/DeslocadorEsq.vhd|
+Z24 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/DeslocadorEsq/DeslocadorEsq.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 13 deslocadoresq 0 22 5=5GI2W5Hz68?^E=Qo05W1
+l14
+L13
+VhLTK23XMd45IQ:1Q_E7_n2
+!s100 c=^?c^g>`Ri?gYmFfg5GO2
+R6
+31
+R16
+!i10b 1
+R17
+R23
+R24
+!i113 1
+R11
+R12
+Eflipflop
+Z25 w1637755517
+R2
+R3
+R0
+Z26 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FlipFlop/FlipFlop.vhd
+Z27 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FlipFlop/FlipFlop.vhd
+l0
+L4
+V1bHabYUl=>naB]N7lgP^X1
+!s100 4dI^ee69cX1_cYALK4kE^3
+R6
+31
+Z28 !s110 1637760307
+!i10b 1
+Z29 !s108 1637760307.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FlipFlop/FlipFlop.vhd|
+Z31 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FlipFlop/FlipFlop.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 8 flipflop 0 22 1bHabYUl=>naB]N7lgP^X1
+l12
+L11
+VIcPRWBAnVnZ7Lg77cDJZ>1
+!s100 bNVK48[Ni^O[odH?gk3:W1
+R6
+31
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R11
+R12
+Efulladder
+Z32 w1636389856
+R2
+R3
+R0
+Z33 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FullAdder/FullAdder.vhd
+Z34 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FullAdder/FullAdder.vhd
+l0
+L4
+V8dQUL;MMK<?PS?HKm_ehL1
+!s100 =Hf0ISeDDlaWYFhH=Bom;0
+R6
+31
+R16
+!i10b 1
+R17
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FullAdder/FullAdder.vhd|
+Z36 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/FullAdder/FullAdder.vhd|
+!i113 1
+R11
+R12
+Alogicfunc
+R2
+R3
+DEx4 work 9 fulladder 0 22 8dQUL;MMK<?PS?HKm_ehL1
+l12
+L11
+V`=D7kPo0`5ma:2JGg@E:Y0
+!s100 6hIPOSkUEYZPDAYE3o`H01
+R6
+31
+R16
+!i10b 1
+R17
+R35
+R36
+!i113 1
+R11
+R12
+Emultiplexador
+Z37 w1636472420
+R2
+R3
+R0
+Z38 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador/Multiplexador.vhd
+Z39 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador/Multiplexador.vhd
+l0
+L4
+VV9[f3i[?WBMbFRbChS;h93
+!s100 :l>gVa7]1V8^IJO8ZBP=Q2
+R6
+31
+R28
+!i10b 1
+R29
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador/Multiplexador.vhd|
+Z41 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador/Multiplexador.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 13 multiplexador 0 22 V9[f3i[?WBMbFRbChS;h93
+l13
+L12
+VY?RYjg?5E77Y7dP0I`Q:h1
+!s100 >2h5ElSfb_cY275?3;>QL3
+R6
+31
+R28
+!i10b 1
+R29
+R40
+R41
+!i113 1
+R11
+R12
+Emultiplexador_16
+Z42 w1637595346
+R2
+R3
+R0
+Z43 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_16/Multiplexador_16.vhd
+Z44 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_16/Multiplexador_16.vhd
+l0
+L4
+V0Q]?hFgW`4zE_12>7@Y:I2
+!s100 Cf8g4`1AU?Q4DTOCPQPY[2
+R6
+31
+R16
+!i10b 1
+R17
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_16/Multiplexador_16.vhd|
+Z46 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_16/Multiplexador_16.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 16 multiplexador_16 0 22 0Q]?hFgW`4zE_12>7@Y:I2
+l22
+L12
+Vme]Ze[aF0A7=Umd<Y@e=C2
+!s100 Rbz0N`S5P`YBZZ2zWm[Ie1
+R6
+31
+R16
+!i10b 1
+R17
+R45
+R46
+!i113 1
+R11
+R12
+Emultiplexador_8
+Z47 w1637595293
+R2
+R3
+R0
+Z48 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_8/Multiplexador_8.vhd
+Z49 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_8/Multiplexador_8.vhd
+l0
+L4
+Vz0iBM^6KUlDW>4^kMRYSC2
+!s100 A_VJfRh]]BGKfo6S@4aT42
+R6
+31
+R16
+!i10b 1
+R17
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_8/Multiplexador_8.vhd|
+Z51 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplexador_8/Multiplexador_8.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 15 multiplexador_8 0 22 z0iBM^6KUlDW>4^kMRYSC2
+l22
+L12
+VLlzSS4:jT?3:f;J;]3GXR0
+!s100 IC1FCl]jZO`MRogglED672
+R6
+31
+R16
+!i10b 1
+R17
+R50
+R51
+!i113 1
+R11
+R12
+Emultiplicador
+Z52 w1637754672
+R2
+R3
+R0
+Z53 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplicador/Multiplicador.vhd
+Z54 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplicador/Multiplicador.vhd
+l0
+L4
+Vf1F:JF5P5bNXZFjAF1_;^1
+!s100 ?8F<>hIZKD?VDL<4l;0nD1
+R6
+31
+R7
+!i10b 1
+R8
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplicador/Multiplicador.vhd|
+Z56 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/Multiplicador/Multiplicador.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 13 multiplicador 0 22 f1F:JF5P5bNXZFjAF1_;^1
+l114
+L16
+V8FAT9X@GY4P>SLB5RV8mN1
+!s100 9ccYTjQoIZGUQOGBGH`d10
+R6
+31
+R7
+!i10b 1
+R8
+R55
+R56
+!i113 1
+R11
+R12
+Eregistradormultiplicador
+Z57 w1637233940
+R2
+R3
+R0
+Z58 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicador/RegistradorMultiplicador.vhd
+Z59 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicador/RegistradorMultiplicador.vhd
+l0
+L4
+V5^XC6eW=?Z99^VF5jl`?C1
+!s100 iHlfhC=m7IAj^F@Z>3XG73
+R6
+31
+R16
+!i10b 1
+R17
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicador/RegistradorMultiplicador.vhd|
+Z61 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicador/RegistradorMultiplicador.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 24 registradormultiplicador 0 22 5^XC6eW=?Z99^VF5jl`?C1
+l21
+L12
+V4[1CSnkaXi9Ja`hzA9@O^2
+!s100 n1E@eh5oB>4oe0D1i>HWU0
+R6
+31
+R16
+!i10b 1
+R17
+R60
+R61
+!i113 1
+R11
+R12
+Eregistradormultiplicando
+Z62 w1637234058
+R2
+R3
+R0
+Z63 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicando/RegistradorMultiplicando.vhd
+Z64 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicando/RegistradorMultiplicando.vhd
+l0
+L4
+VlR2J:]cD]E1[17Z74S`2]1
+!s100 iTlaF6;a25P2iXLiA2USk2
+R6
+31
+R16
+!i10b 1
+R17
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicando/RegistradorMultiplicando.vhd|
+Z66 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorMultiplicando/RegistradorMultiplicando.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 24 registradormultiplicando 0 22 lR2J:]cD]E1[17Z74S`2]1
+l21
+L12
+VzPma7:FAWVB?i5Bf17dWP2
+!s100 7j_WE]leZZeT8f_k@aeS10
+R6
+31
+R16
+!i10b 1
+R17
+R65
+R66
+!i113 1
+R11
+R12
+Eregistradorproduto
+Z67 w1637234270
+R2
+R3
+R0
+Z68 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorProduto/RegistradorProduto.vhd
+Z69 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorProduto/RegistradorProduto.vhd
+l0
+L4
+VBQ?`K3VbYYXQ`9JDeFOXo0
+!s100 ScC8;KWk9S@CRAA0hDjU71
+R6
+31
+R16
+!i10b 1
+R17
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorProduto/RegistradorProduto.vhd|
+Z71 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/RegistradorProduto/RegistradorProduto.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 18 registradorproduto 0 22 BQ?`K3VbYYXQ`9JDeFOXo0
+l21
+L12
+Ve[Mm7k56Gk;L@hdfA_nZG1
+!s100 5_G<Ka3M3?Iz7gJ@PK;h<3
+R6
+31
+R16
+!i10b 1
+R17
+R70
+R71
+!i113 1
+R11
+R12
+Eunidadecontrole
+Z72 w1637758450
+R2
+R3
+R0
+Z73 8C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/UnidadeControle/UnidadeControle.vhd
+Z74 FC:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/UnidadeControle/UnidadeControle.vhd
+l0
+L4
+V8:fH=dn^;>Yozb:G^SIhj0
+!s100 ]HP@kBO>J]K1`>VjSiA5H2
+R6
+31
+R16
+!i10b 1
+R17
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/UnidadeControle/UnidadeControle.vhd|
+Z76 !s107 C:/Users/User/Desktop/Multiplicador_Editado_quase/Componentes/UnidadeControle/UnidadeControle.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 15 unidadecontrole 0 22 8:fH=dn^;>Yozb:G^SIhj0
+l18
+L14
+V>l4=FCU=<[8S>dQ2lYoOF2
+!s100 81U=43i`[Bo]WTh[moZNO2
+R6
+31
+R16
+!i10b 1
+R17
+R75
+R76
+!i113 1
+R11
+R12

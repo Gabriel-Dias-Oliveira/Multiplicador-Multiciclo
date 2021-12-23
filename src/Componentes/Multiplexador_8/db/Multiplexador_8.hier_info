@@ -1,0 +1,99 @@
+|Multiplexador_8
+Multiplicador[0] => Multiplexador:Stage00.A
+Multiplicador[1] => Multiplexador:Stage01.A
+Multiplicador[2] => Multiplexador:Stage02.A
+Multiplicador[3] => Multiplexador:Stage03.A
+Multiplicador[4] => Multiplexador:Stage04.A
+Multiplicador[5] => Multiplexador:Stage05.A
+Multiplicador[6] => Multiplexador:Stage06.A
+Multiplicador[7] => Multiplexador:Stage07.A
+Multiplicador_Deslocado[0] => Multiplexador:Stage00.B
+Multiplicador_Deslocado[1] => Multiplexador:Stage01.B
+Multiplicador_Deslocado[2] => Multiplexador:Stage02.B
+Multiplicador_Deslocado[3] => Multiplexador:Stage03.B
+Multiplicador_Deslocado[4] => Multiplexador:Stage04.B
+Multiplicador_Deslocado[5] => Multiplexador:Stage05.B
+Multiplicador_Deslocado[6] => Multiplexador:Stage06.B
+Multiplicador_Deslocado[7] => Multiplexador:Stage07.B
+S => Multiplexador:Stage07.S
+S => Multiplexador:Stage06.S
+S => Multiplexador:Stage05.S
+S => Multiplexador:Stage04.S
+S => Multiplexador:Stage03.S
+S => Multiplexador:Stage02.S
+S => Multiplexador:Stage01.S
+S => Multiplexador:Stage00.S
+f[0] <= Multiplexador:Stage00.f
+f[1] <= Multiplexador:Stage01.f
+f[2] <= Multiplexador:Stage02.f
+f[3] <= Multiplexador:Stage03.f
+f[4] <= Multiplexador:Stage04.f
+f[5] <= Multiplexador:Stage05.f
+f[6] <= Multiplexador:Stage06.f
+f[7] <= Multiplexador:Stage07.f
+
+
+|Multiplexador_8|Multiplexador:Stage07
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage06
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage05
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage04
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage03
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage02
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage01
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_8|Multiplexador:Stage00
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

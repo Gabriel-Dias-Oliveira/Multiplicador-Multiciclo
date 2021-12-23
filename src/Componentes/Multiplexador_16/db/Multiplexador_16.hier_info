@@ -1,0 +1,195 @@
+|Multiplexador_16
+A[0] => Multiplexador:Stage00.A
+A[1] => Multiplexador:Stage01.A
+A[2] => Multiplexador:Stage02.A
+A[3] => Multiplexador:Stage03.A
+A[4] => Multiplexador:Stage04.A
+A[5] => Multiplexador:Stage05.A
+A[6] => Multiplexador:Stage06.A
+A[7] => Multiplexador:Stage07.A
+A[8] => Multiplexador:Stage08.A
+A[9] => Multiplexador:Stage09.A
+A[10] => Multiplexador:Stage10.A
+A[11] => Multiplexador:Stage11.A
+A[12] => Multiplexador:Stage12.A
+A[13] => Multiplexador:Stage13.A
+A[14] => Multiplexador:Stage14.A
+A[15] => Multiplexador:Stage15.A
+B[0] => Multiplexador:Stage00.B
+B[1] => Multiplexador:Stage01.B
+B[2] => Multiplexador:Stage02.B
+B[3] => Multiplexador:Stage03.B
+B[4] => Multiplexador:Stage04.B
+B[5] => Multiplexador:Stage05.B
+B[6] => Multiplexador:Stage06.B
+B[7] => Multiplexador:Stage07.B
+B[8] => Multiplexador:Stage08.B
+B[9] => Multiplexador:Stage09.B
+B[10] => Multiplexador:Stage10.B
+B[11] => Multiplexador:Stage11.B
+B[12] => Multiplexador:Stage12.B
+B[13] => Multiplexador:Stage13.B
+B[14] => Multiplexador:Stage14.B
+B[15] => Multiplexador:Stage15.B
+S => Multiplexador:Stage15.S
+S => Multiplexador:Stage14.S
+S => Multiplexador:Stage13.S
+S => Multiplexador:Stage12.S
+S => Multiplexador:Stage11.S
+S => Multiplexador:Stage10.S
+S => Multiplexador:Stage09.S
+S => Multiplexador:Stage08.S
+S => Multiplexador:Stage07.S
+S => Multiplexador:Stage06.S
+S => Multiplexador:Stage05.S
+S => Multiplexador:Stage04.S
+S => Multiplexador:Stage03.S
+S => Multiplexador:Stage02.S
+S => Multiplexador:Stage01.S
+S => Multiplexador:Stage00.S
+f[0] <= Multiplexador:Stage00.f
+f[1] <= Multiplexador:Stage01.f
+f[2] <= Multiplexador:Stage02.f
+f[3] <= Multiplexador:Stage03.f
+f[4] <= Multiplexador:Stage04.f
+f[5] <= Multiplexador:Stage05.f
+f[6] <= Multiplexador:Stage06.f
+f[7] <= Multiplexador:Stage07.f
+f[8] <= Multiplexador:Stage08.f
+f[9] <= Multiplexador:Stage09.f
+f[10] <= Multiplexador:Stage10.f
+f[11] <= Multiplexador:Stage11.f
+f[12] <= Multiplexador:Stage12.f
+f[13] <= Multiplexador:Stage13.f
+f[14] <= Multiplexador:Stage14.f
+f[15] <= Multiplexador:Stage15.f
+
+
+|Multiplexador_16|Multiplexador:Stage15
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage14
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage13
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage12
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage11
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage10
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage09
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage08
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage07
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage06
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage05
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage04
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage03
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage02
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage01
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplexador_16|Multiplexador:Stage00
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

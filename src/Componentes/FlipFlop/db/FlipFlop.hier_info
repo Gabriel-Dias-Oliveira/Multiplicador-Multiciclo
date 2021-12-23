@@ -1,0 +1,8 @@
+|FlipFlop
+D => Q.DATAB
+Enable => Q.OUTPUTSELECT
+Resetn => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

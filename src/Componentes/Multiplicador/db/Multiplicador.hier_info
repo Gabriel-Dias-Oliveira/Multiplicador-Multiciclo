@@ -1,0 +1,1432 @@
+|Multiplicador
+clk => UnidadeControle:Unidade_Controle.Clock
+clk => RegistradorMultiplicador:Registrador_Multiplicador.Clock
+clk => RegistradorMultiplicando:Registrador_Multiplicando.Clock
+clk => RegistradorProduto:Registrador_Produto.Clock
+reset => UnidadeControle:Unidade_Controle.Resetn
+reset => RegistradorMultiplicador:Registrador_Multiplicador.Reset
+reset => RegistradorMultiplicando:Registrador_Multiplicando.Reset
+reset => RegistradorProduto:Registrador_Produto.Reset
+Multiplicando[0] => Multiplexador_16:Multiplexador_Multiplicando.B[0]
+Multiplicando[1] => Multiplexador_16:Multiplexador_Multiplicando.B[1]
+Multiplicando[2] => Multiplexador_16:Multiplexador_Multiplicando.B[2]
+Multiplicando[3] => Multiplexador_16:Multiplexador_Multiplicando.B[3]
+Multiplicando[4] => Multiplexador_16:Multiplexador_Multiplicando.B[4]
+Multiplicando[5] => Multiplexador_16:Multiplexador_Multiplicando.B[5]
+Multiplicando[6] => Multiplexador_16:Multiplexador_Multiplicando.B[6]
+Multiplicando[7] => Multiplexador_16:Multiplexador_Multiplicando.B[7]
+Multiplicador[0] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[0]
+Multiplicador[1] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[1]
+Multiplicador[2] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[2]
+Multiplicador[3] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[3]
+Multiplicador[4] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[4]
+Multiplicador[5] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[5]
+Multiplicador[6] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[6]
+Multiplicador[7] => Multiplexador_8:Multiplexador_Multiplicador.Multiplicador_Deslocado[7]
+R[0] << RegistradorProduto:Registrador_Produto.Q[0]
+R[1] << RegistradorProduto:Registrador_Produto.Q[1]
+R[2] << RegistradorProduto:Registrador_Produto.Q[2]
+R[3] << RegistradorProduto:Registrador_Produto.Q[3]
+R[4] << RegistradorProduto:Registrador_Produto.Q[4]
+R[5] << RegistradorProduto:Registrador_Produto.Q[5]
+R[6] << RegistradorProduto:Registrador_Produto.Q[6]
+R[7] << RegistradorProduto:Registrador_Produto.Q[7]
+R[8] << RegistradorProduto:Registrador_Produto.Q[8]
+R[9] << RegistradorProduto:Registrador_Produto.Q[9]
+R[10] << RegistradorProduto:Registrador_Produto.Q[10]
+R[11] << RegistradorProduto:Registrador_Produto.Q[11]
+R[12] << RegistradorProduto:Registrador_Produto.Q[12]
+R[13] << RegistradorProduto:Registrador_Produto.Q[13]
+R[14] << RegistradorProduto:Registrador_Produto.Q[14]
+R[15] << RegistradorProduto:Registrador_Produto.Q[15]
+calcula => UnidadeControle:Unidade_Controle.calcula
+pronto << UnidadeControle:Unidade_Controle.done
+
+
+|Multiplicador|UnidadeControle:Unidade_Controle
+Clock => y~1.DATAIN
+Resetn => y~3.DATAIN
+calcula => Selector1.IN4
+calcula => Selector0.IN2
+Multiplicando[0] => Equal0.IN15
+Multiplicando[1] => Equal0.IN14
+Multiplicando[2] => Equal0.IN13
+Multiplicando[3] => Equal0.IN12
+Multiplicando[4] => Equal0.IN11
+Multiplicando[5] => Equal0.IN10
+Multiplicando[6] => Equal0.IN9
+Multiplicando[7] => Equal0.IN8
+Multiplicando[8] => Equal0.IN7
+Multiplicando[9] => Equal0.IN6
+Multiplicando[10] => Equal0.IN5
+Multiplicando[11] => Equal0.IN4
+Multiplicando[12] => Equal0.IN3
+Multiplicando[13] => Equal0.IN2
+Multiplicando[14] => Equal0.IN1
+Multiplicando[15] => Equal0.IN0
+Multiplicador[0] => y.DATAA
+Multiplicador[0] => Equal1.IN7
+Multiplicador[0] => y.DATAA
+Multiplicador[1] => Equal1.IN6
+Multiplicador[2] => Equal1.IN5
+Multiplicador[3] => Equal1.IN4
+Multiplicador[4] => Equal1.IN3
+Multiplicador[5] => Equal1.IN2
+Multiplicador[6] => Equal1.IN1
+Multiplicador[7] => Equal1.IN0
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+Eentradas <= Eentradas.DB_MAX_OUTPUT_PORT_TYPE
+Eproduto <= Eentradas.DB_MAX_OUTPUT_PORT_TYPE
+Sentradas <= Sentradas.DB_MAX_OUTPUT_PORT_TYPE
+Sproduto <= Sentradas.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador
+Multiplicador[0] => Multiplexador:Stage00.A
+Multiplicador[1] => Multiplexador:Stage01.A
+Multiplicador[2] => Multiplexador:Stage02.A
+Multiplicador[3] => Multiplexador:Stage03.A
+Multiplicador[4] => Multiplexador:Stage04.A
+Multiplicador[5] => Multiplexador:Stage05.A
+Multiplicador[6] => Multiplexador:Stage06.A
+Multiplicador[7] => Multiplexador:Stage07.A
+Multiplicador_Deslocado[0] => Multiplexador:Stage00.B
+Multiplicador_Deslocado[1] => Multiplexador:Stage01.B
+Multiplicador_Deslocado[2] => Multiplexador:Stage02.B
+Multiplicador_Deslocado[3] => Multiplexador:Stage03.B
+Multiplicador_Deslocado[4] => Multiplexador:Stage04.B
+Multiplicador_Deslocado[5] => Multiplexador:Stage05.B
+Multiplicador_Deslocado[6] => Multiplexador:Stage06.B
+Multiplicador_Deslocado[7] => Multiplexador:Stage07.B
+S => Multiplexador:Stage07.S
+S => Multiplexador:Stage06.S
+S => Multiplexador:Stage05.S
+S => Multiplexador:Stage04.S
+S => Multiplexador:Stage03.S
+S => Multiplexador:Stage02.S
+S => Multiplexador:Stage01.S
+S => Multiplexador:Stage00.S
+f[0] <= Multiplexador:Stage00.f
+f[1] <= Multiplexador:Stage01.f
+f[2] <= Multiplexador:Stage02.f
+f[3] <= Multiplexador:Stage03.f
+f[4] <= Multiplexador:Stage04.f
+f[5] <= Multiplexador:Stage05.f
+f[6] <= Multiplexador:Stage06.f
+f[7] <= Multiplexador:Stage07.f
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage07
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage06
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage05
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage04
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage03
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage02
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage01
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_8:Multiplexador_Multiplicador|Multiplexador:Stage00
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|DeslocadorDir:Deslocador_Direita
+input_vector[0] => ~NO_FANOUT~
+input_vector[1] => output_vector[0].DATAIN
+input_vector[2] => output_vector[1].DATAIN
+input_vector[3] => output_vector[2].DATAIN
+input_vector[4] => output_vector[3].DATAIN
+input_vector[5] => output_vector[4].DATAIN
+input_vector[6] => output_vector[5].DATAIN
+input_vector[7] => output_vector[6].DATAIN
+w => output_vector[7].DATAIN
+output_vector[0] <= input_vector[1].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[1] <= input_vector[2].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[2] <= input_vector[3].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[3] <= input_vector[4].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[4] <= input_vector[5].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[5] <= input_vector[6].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[6] <= input_vector[7].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[7] <= w.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador
+Multiplicador[0] => FlipFlop:Stage00.D
+Multiplicador[1] => FlipFlop:Stage01.D
+Multiplicador[2] => FlipFlop:Stage02.D
+Multiplicador[3] => FlipFlop:Stage03.D
+Multiplicador[4] => FlipFlop:Stage04.D
+Multiplicador[5] => FlipFlop:Stage05.D
+Multiplicador[6] => FlipFlop:Stage06.D
+Multiplicador[7] => FlipFlop:Stage07.D
+Enable => FlipFlop:Stage07.Enable
+Enable => FlipFlop:Stage06.Enable
+Enable => FlipFlop:Stage05.Enable
+Enable => FlipFlop:Stage04.Enable
+Enable => FlipFlop:Stage03.Enable
+Enable => FlipFlop:Stage02.Enable
+Enable => FlipFlop:Stage01.Enable
+Enable => FlipFlop:Stage00.Enable
+Reset => FlipFlop:Stage07.Resetn
+Reset => FlipFlop:Stage06.Resetn
+Reset => FlipFlop:Stage05.Resetn
+Reset => FlipFlop:Stage04.Resetn
+Reset => FlipFlop:Stage03.Resetn
+Reset => FlipFlop:Stage02.Resetn
+Reset => FlipFlop:Stage01.Resetn
+Reset => FlipFlop:Stage00.Resetn
+Clock => FlipFlop:Stage07.Clock
+Clock => FlipFlop:Stage06.Clock
+Clock => FlipFlop:Stage05.Clock
+Clock => FlipFlop:Stage04.Clock
+Clock => FlipFlop:Stage03.Clock
+Clock => FlipFlop:Stage02.Clock
+Clock => FlipFlop:Stage01.Clock
+Clock => FlipFlop:Stage00.Clock
+Q[0] <= FlipFlop:Stage00.Q
+Q[1] <= FlipFlop:Stage01.Q
+Q[2] <= FlipFlop:Stage02.Q
+Q[3] <= FlipFlop:Stage03.Q
+Q[4] <= FlipFlop:Stage04.Q
+Q[5] <= FlipFlop:Stage05.Q
+Q[6] <= FlipFlop:Stage06.Q
+Q[7] <= FlipFlop:Stage07.Q
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage07
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage06
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage05
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage04
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage03
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage02
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage01
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicador:Registrador_Multiplicador|FlipFlop:Stage00
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando
+A[0] => Multiplexador:Stage00.A
+A[1] => Multiplexador:Stage01.A
+A[2] => Multiplexador:Stage02.A
+A[3] => Multiplexador:Stage03.A
+A[4] => Multiplexador:Stage04.A
+A[5] => Multiplexador:Stage05.A
+A[6] => Multiplexador:Stage06.A
+A[7] => Multiplexador:Stage07.A
+A[8] => Multiplexador:Stage08.A
+A[9] => Multiplexador:Stage09.A
+A[10] => Multiplexador:Stage10.A
+A[11] => Multiplexador:Stage11.A
+A[12] => Multiplexador:Stage12.A
+A[13] => Multiplexador:Stage13.A
+A[14] => Multiplexador:Stage14.A
+A[15] => Multiplexador:Stage15.A
+B[0] => Multiplexador:Stage00.B
+B[1] => Multiplexador:Stage01.B
+B[2] => Multiplexador:Stage02.B
+B[3] => Multiplexador:Stage03.B
+B[4] => Multiplexador:Stage04.B
+B[5] => Multiplexador:Stage05.B
+B[6] => Multiplexador:Stage06.B
+B[7] => Multiplexador:Stage07.B
+B[8] => Multiplexador:Stage08.B
+B[9] => Multiplexador:Stage09.B
+B[10] => Multiplexador:Stage10.B
+B[11] => Multiplexador:Stage11.B
+B[12] => Multiplexador:Stage12.B
+B[13] => Multiplexador:Stage13.B
+B[14] => Multiplexador:Stage14.B
+B[15] => Multiplexador:Stage15.B
+S => Multiplexador:Stage15.S
+S => Multiplexador:Stage14.S
+S => Multiplexador:Stage13.S
+S => Multiplexador:Stage12.S
+S => Multiplexador:Stage11.S
+S => Multiplexador:Stage10.S
+S => Multiplexador:Stage09.S
+S => Multiplexador:Stage08.S
+S => Multiplexador:Stage07.S
+S => Multiplexador:Stage06.S
+S => Multiplexador:Stage05.S
+S => Multiplexador:Stage04.S
+S => Multiplexador:Stage03.S
+S => Multiplexador:Stage02.S
+S => Multiplexador:Stage01.S
+S => Multiplexador:Stage00.S
+f[0] <= Multiplexador:Stage00.f
+f[1] <= Multiplexador:Stage01.f
+f[2] <= Multiplexador:Stage02.f
+f[3] <= Multiplexador:Stage03.f
+f[4] <= Multiplexador:Stage04.f
+f[5] <= Multiplexador:Stage05.f
+f[6] <= Multiplexador:Stage06.f
+f[7] <= Multiplexador:Stage07.f
+f[8] <= Multiplexador:Stage08.f
+f[9] <= Multiplexador:Stage09.f
+f[10] <= Multiplexador:Stage10.f
+f[11] <= Multiplexador:Stage11.f
+f[12] <= Multiplexador:Stage12.f
+f[13] <= Multiplexador:Stage13.f
+f[14] <= Multiplexador:Stage14.f
+f[15] <= Multiplexador:Stage15.f
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage15
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage14
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage13
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage12
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage11
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage10
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage09
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage08
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage07
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage06
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage05
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage04
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage03
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage02
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage01
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Multiplicando|Multiplexador:Stage00
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|DeslocadorEsq:Deslocador_Esquerda
+input_vector[0] => output_vector[1].DATAIN
+input_vector[1] => output_vector[2].DATAIN
+input_vector[2] => output_vector[3].DATAIN
+input_vector[3] => output_vector[4].DATAIN
+input_vector[4] => output_vector[5].DATAIN
+input_vector[5] => output_vector[6].DATAIN
+input_vector[6] => output_vector[7].DATAIN
+input_vector[7] => output_vector[8].DATAIN
+input_vector[8] => output_vector[9].DATAIN
+input_vector[9] => output_vector[10].DATAIN
+input_vector[10] => output_vector[11].DATAIN
+input_vector[11] => output_vector[12].DATAIN
+input_vector[12] => output_vector[13].DATAIN
+input_vector[13] => output_vector[14].DATAIN
+input_vector[14] => output_vector[15].DATAIN
+input_vector[15] => ~NO_FANOUT~
+w => output_vector[0].DATAIN
+output_vector[0] <= w.DB_MAX_OUTPUT_PORT_TYPE
+output_vector[1] <= input_vector[0].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[2] <= input_vector[1].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[3] <= input_vector[2].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[4] <= input_vector[3].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[5] <= input_vector[4].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[6] <= input_vector[5].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[7] <= input_vector[6].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[8] <= input_vector[7].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[9] <= input_vector[8].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[10] <= input_vector[9].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[11] <= input_vector[10].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[12] <= input_vector[11].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[13] <= input_vector[12].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[14] <= input_vector[13].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[15] <= input_vector[14].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando
+Multiplicando[0] => FlipFlop:Stage00.D
+Multiplicando[1] => FlipFlop:Stage01.D
+Multiplicando[2] => FlipFlop:Stage02.D
+Multiplicando[3] => FlipFlop:Stage03.D
+Multiplicando[4] => FlipFlop:Stage04.D
+Multiplicando[5] => FlipFlop:Stage05.D
+Multiplicando[6] => FlipFlop:Stage06.D
+Multiplicando[7] => FlipFlop:Stage07.D
+Multiplicando[8] => FlipFlop:Stage08.D
+Multiplicando[9] => FlipFlop:Stage09.D
+Multiplicando[10] => FlipFlop:Stage10.D
+Multiplicando[11] => FlipFlop:Stage11.D
+Multiplicando[12] => FlipFlop:Stage12.D
+Multiplicando[13] => FlipFlop:Stage13.D
+Multiplicando[14] => FlipFlop:Stage14.D
+Multiplicando[15] => FlipFlop:Stage15.D
+Enable => FlipFlop:Stage15.Enable
+Enable => FlipFlop:Stage14.Enable
+Enable => FlipFlop:Stage13.Enable
+Enable => FlipFlop:Stage12.Enable
+Enable => FlipFlop:Stage11.Enable
+Enable => FlipFlop:Stage10.Enable
+Enable => FlipFlop:Stage09.Enable
+Enable => FlipFlop:Stage08.Enable
+Enable => FlipFlop:Stage07.Enable
+Enable => FlipFlop:Stage06.Enable
+Enable => FlipFlop:Stage05.Enable
+Enable => FlipFlop:Stage04.Enable
+Enable => FlipFlop:Stage03.Enable
+Enable => FlipFlop:Stage02.Enable
+Enable => FlipFlop:Stage01.Enable
+Enable => FlipFlop:Stage00.Enable
+Reset => FlipFlop:Stage15.Resetn
+Reset => FlipFlop:Stage14.Resetn
+Reset => FlipFlop:Stage13.Resetn
+Reset => FlipFlop:Stage12.Resetn
+Reset => FlipFlop:Stage11.Resetn
+Reset => FlipFlop:Stage10.Resetn
+Reset => FlipFlop:Stage09.Resetn
+Reset => FlipFlop:Stage08.Resetn
+Reset => FlipFlop:Stage07.Resetn
+Reset => FlipFlop:Stage06.Resetn
+Reset => FlipFlop:Stage05.Resetn
+Reset => FlipFlop:Stage04.Resetn
+Reset => FlipFlop:Stage03.Resetn
+Reset => FlipFlop:Stage02.Resetn
+Reset => FlipFlop:Stage01.Resetn
+Reset => FlipFlop:Stage00.Resetn
+Clock => FlipFlop:Stage15.Clock
+Clock => FlipFlop:Stage14.Clock
+Clock => FlipFlop:Stage13.Clock
+Clock => FlipFlop:Stage12.Clock
+Clock => FlipFlop:Stage11.Clock
+Clock => FlipFlop:Stage10.Clock
+Clock => FlipFlop:Stage09.Clock
+Clock => FlipFlop:Stage08.Clock
+Clock => FlipFlop:Stage07.Clock
+Clock => FlipFlop:Stage06.Clock
+Clock => FlipFlop:Stage05.Clock
+Clock => FlipFlop:Stage04.Clock
+Clock => FlipFlop:Stage03.Clock
+Clock => FlipFlop:Stage02.Clock
+Clock => FlipFlop:Stage01.Clock
+Clock => FlipFlop:Stage00.Clock
+Q[0] <= FlipFlop:Stage00.Q
+Q[1] <= FlipFlop:Stage01.Q
+Q[2] <= FlipFlop:Stage02.Q
+Q[3] <= FlipFlop:Stage03.Q
+Q[4] <= FlipFlop:Stage04.Q
+Q[5] <= FlipFlop:Stage05.Q
+Q[6] <= FlipFlop:Stage06.Q
+Q[7] <= FlipFlop:Stage07.Q
+Q[8] <= FlipFlop:Stage08.Q
+Q[9] <= FlipFlop:Stage09.Q
+Q[10] <= FlipFlop:Stage10.Q
+Q[11] <= FlipFlop:Stage11.Q
+Q[12] <= FlipFlop:Stage12.Q
+Q[13] <= FlipFlop:Stage13.Q
+Q[14] <= FlipFlop:Stage14.Q
+Q[15] <= FlipFlop:Stage15.Q
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage15
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage14
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage13
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage12
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage11
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage10
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage09
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage08
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage07
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage06
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage05
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage04
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage03
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage02
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage01
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorMultiplicando:Registrador_Multiplicando|FlipFlop:Stage00
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto
+A[0] => Multiplexador:Stage00.A
+A[1] => Multiplexador:Stage01.A
+A[2] => Multiplexador:Stage02.A
+A[3] => Multiplexador:Stage03.A
+A[4] => Multiplexador:Stage04.A
+A[5] => Multiplexador:Stage05.A
+A[6] => Multiplexador:Stage06.A
+A[7] => Multiplexador:Stage07.A
+A[8] => Multiplexador:Stage08.A
+A[9] => Multiplexador:Stage09.A
+A[10] => Multiplexador:Stage10.A
+A[11] => Multiplexador:Stage11.A
+A[12] => Multiplexador:Stage12.A
+A[13] => Multiplexador:Stage13.A
+A[14] => Multiplexador:Stage14.A
+A[15] => Multiplexador:Stage15.A
+B[0] => Multiplexador:Stage00.B
+B[1] => Multiplexador:Stage01.B
+B[2] => Multiplexador:Stage02.B
+B[3] => Multiplexador:Stage03.B
+B[4] => Multiplexador:Stage04.B
+B[5] => Multiplexador:Stage05.B
+B[6] => Multiplexador:Stage06.B
+B[7] => Multiplexador:Stage07.B
+B[8] => Multiplexador:Stage08.B
+B[9] => Multiplexador:Stage09.B
+B[10] => Multiplexador:Stage10.B
+B[11] => Multiplexador:Stage11.B
+B[12] => Multiplexador:Stage12.B
+B[13] => Multiplexador:Stage13.B
+B[14] => Multiplexador:Stage14.B
+B[15] => Multiplexador:Stage15.B
+S => Multiplexador:Stage15.S
+S => Multiplexador:Stage14.S
+S => Multiplexador:Stage13.S
+S => Multiplexador:Stage12.S
+S => Multiplexador:Stage11.S
+S => Multiplexador:Stage10.S
+S => Multiplexador:Stage09.S
+S => Multiplexador:Stage08.S
+S => Multiplexador:Stage07.S
+S => Multiplexador:Stage06.S
+S => Multiplexador:Stage05.S
+S => Multiplexador:Stage04.S
+S => Multiplexador:Stage03.S
+S => Multiplexador:Stage02.S
+S => Multiplexador:Stage01.S
+S => Multiplexador:Stage00.S
+f[0] <= Multiplexador:Stage00.f
+f[1] <= Multiplexador:Stage01.f
+f[2] <= Multiplexador:Stage02.f
+f[3] <= Multiplexador:Stage03.f
+f[4] <= Multiplexador:Stage04.f
+f[5] <= Multiplexador:Stage05.f
+f[6] <= Multiplexador:Stage06.f
+f[7] <= Multiplexador:Stage07.f
+f[8] <= Multiplexador:Stage08.f
+f[9] <= Multiplexador:Stage09.f
+f[10] <= Multiplexador:Stage10.f
+f[11] <= Multiplexador:Stage11.f
+f[12] <= Multiplexador:Stage12.f
+f[13] <= Multiplexador:Stage13.f
+f[14] <= Multiplexador:Stage14.f
+f[15] <= Multiplexador:Stage15.f
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage15
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage14
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage13
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage12
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage11
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage10
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage09
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage08
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage07
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage06
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage05
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage04
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage03
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage02
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage01
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|Multiplexador_16:Multiplexador_Produto|Multiplexador:Stage00
+A => f.IN0
+B => f.IN0
+S => f.IN1
+S => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto
+Produto[0] => FlipFlop:Stage00.D
+Produto[1] => FlipFlop:Stage01.D
+Produto[2] => FlipFlop:Stage02.D
+Produto[3] => FlipFlop:Stage03.D
+Produto[4] => FlipFlop:Stage04.D
+Produto[5] => FlipFlop:Stage05.D
+Produto[6] => FlipFlop:Stage06.D
+Produto[7] => FlipFlop:Stage07.D
+Produto[8] => FlipFlop:Stage08.D
+Produto[9] => FlipFlop:Stage09.D
+Produto[10] => FlipFlop:Stage10.D
+Produto[11] => FlipFlop:Stage11.D
+Produto[12] => FlipFlop:Stage12.D
+Produto[13] => FlipFlop:Stage13.D
+Produto[14] => FlipFlop:Stage14.D
+Produto[15] => FlipFlop:Stage15.D
+Enable => FlipFlop:Stage15.Enable
+Enable => FlipFlop:Stage14.Enable
+Enable => FlipFlop:Stage13.Enable
+Enable => FlipFlop:Stage12.Enable
+Enable => FlipFlop:Stage11.Enable
+Enable => FlipFlop:Stage10.Enable
+Enable => FlipFlop:Stage09.Enable
+Enable => FlipFlop:Stage08.Enable
+Enable => FlipFlop:Stage07.Enable
+Enable => FlipFlop:Stage06.Enable
+Enable => FlipFlop:Stage05.Enable
+Enable => FlipFlop:Stage04.Enable
+Enable => FlipFlop:Stage03.Enable
+Enable => FlipFlop:Stage02.Enable
+Enable => FlipFlop:Stage01.Enable
+Enable => FlipFlop:Stage00.Enable
+Reset => FlipFlop:Stage15.Resetn
+Reset => FlipFlop:Stage14.Resetn
+Reset => FlipFlop:Stage13.Resetn
+Reset => FlipFlop:Stage12.Resetn
+Reset => FlipFlop:Stage11.Resetn
+Reset => FlipFlop:Stage10.Resetn
+Reset => FlipFlop:Stage09.Resetn
+Reset => FlipFlop:Stage08.Resetn
+Reset => FlipFlop:Stage07.Resetn
+Reset => FlipFlop:Stage06.Resetn
+Reset => FlipFlop:Stage05.Resetn
+Reset => FlipFlop:Stage04.Resetn
+Reset => FlipFlop:Stage03.Resetn
+Reset => FlipFlop:Stage02.Resetn
+Reset => FlipFlop:Stage01.Resetn
+Reset => FlipFlop:Stage00.Resetn
+Clock => FlipFlop:Stage15.Clock
+Clock => FlipFlop:Stage14.Clock
+Clock => FlipFlop:Stage13.Clock
+Clock => FlipFlop:Stage12.Clock
+Clock => FlipFlop:Stage11.Clock
+Clock => FlipFlop:Stage10.Clock
+Clock => FlipFlop:Stage09.Clock
+Clock => FlipFlop:Stage08.Clock
+Clock => FlipFlop:Stage07.Clock
+Clock => FlipFlop:Stage06.Clock
+Clock => FlipFlop:Stage05.Clock
+Clock => FlipFlop:Stage04.Clock
+Clock => FlipFlop:Stage03.Clock
+Clock => FlipFlop:Stage02.Clock
+Clock => FlipFlop:Stage01.Clock
+Clock => FlipFlop:Stage00.Clock
+Q[0] <= FlipFlop:Stage00.Q
+Q[1] <= FlipFlop:Stage01.Q
+Q[2] <= FlipFlop:Stage02.Q
+Q[3] <= FlipFlop:Stage03.Q
+Q[4] <= FlipFlop:Stage04.Q
+Q[5] <= FlipFlop:Stage05.Q
+Q[6] <= FlipFlop:Stage06.Q
+Q[7] <= FlipFlop:Stage07.Q
+Q[8] <= FlipFlop:Stage08.Q
+Q[9] <= FlipFlop:Stage09.Q
+Q[10] <= FlipFlop:Stage10.Q
+Q[11] <= FlipFlop:Stage11.Q
+Q[12] <= FlipFlop:Stage12.Q
+Q[13] <= FlipFlop:Stage13.Q
+Q[14] <= FlipFlop:Stage14.Q
+Q[15] <= FlipFlop:Stage15.Q
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage15
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage14
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage13
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage12
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage11
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage10
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage09
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage08
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage07
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage06
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage05
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage04
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage03
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage02
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage01
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|RegistradorProduto:Registrador_Produto|FlipFlop:Stage00
+D => Q~reg0.DATAIN
+Enable => Q~reg0.ENA
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial
+Multiplicando[0] => FullAdder:Stage00.x
+Multiplicando[1] => FullAdder:Stage01.x
+Multiplicando[2] => FullAdder:Stage02.x
+Multiplicando[3] => FullAdder:Stage03.x
+Multiplicando[4] => FullAdder:Stage04.x
+Multiplicando[5] => FullAdder:Stage05.x
+Multiplicando[6] => FullAdder:Stage06.x
+Multiplicando[7] => FullAdder:Stage07.x
+Multiplicando[8] => FullAdder:Stage08.x
+Multiplicando[9] => FullAdder:Stage09.x
+Multiplicando[10] => FullAdder:Stage10.x
+Multiplicando[11] => FullAdder:Stage11.x
+Multiplicando[12] => FullAdder:Stage12.x
+Multiplicando[13] => FullAdder:Stage13.x
+Multiplicando[14] => FullAdder:Stage14.x
+Multiplicando[15] => FullAdder:Stage15.x
+Produto[0] => FullAdder:Stage00.y
+Produto[1] => FullAdder:Stage01.y
+Produto[2] => FullAdder:Stage02.y
+Produto[3] => FullAdder:Stage03.y
+Produto[4] => FullAdder:Stage04.y
+Produto[5] => FullAdder:Stage05.y
+Produto[6] => FullAdder:Stage06.y
+Produto[7] => FullAdder:Stage07.y
+Produto[8] => FullAdder:Stage08.y
+Produto[9] => FullAdder:Stage09.y
+Produto[10] => FullAdder:Stage10.y
+Produto[11] => FullAdder:Stage11.y
+Produto[12] => FullAdder:Stage12.y
+Produto[13] => FullAdder:Stage13.y
+Produto[14] => FullAdder:Stage14.y
+Produto[15] => FullAdder:Stage15.y
+s[0] <= FullAdder:Stage00.s
+s[1] <= FullAdder:Stage01.s
+s[2] <= FullAdder:Stage02.s
+s[3] <= FullAdder:Stage03.s
+s[4] <= FullAdder:Stage04.s
+s[5] <= FullAdder:Stage05.s
+s[6] <= FullAdder:Stage06.s
+s[7] <= FullAdder:Stage07.s
+s[8] <= FullAdder:Stage08.s
+s[9] <= FullAdder:Stage09.s
+s[10] <= FullAdder:Stage10.s
+s[11] <= FullAdder:Stage11.s
+s[12] <= FullAdder:Stage12.s
+s[13] <= FullAdder:Stage13.s
+s[14] <= FullAdder:Stage14.s
+s[15] <= FullAdder:Stage15.s
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage00
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage01
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage02
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage03
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage04
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage05
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage06
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage07
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage08
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage09
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage10
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage11
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage12
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage13
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage14
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplicador|BitsAdder:Soma_Parcial|FullAdder:Stage15
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

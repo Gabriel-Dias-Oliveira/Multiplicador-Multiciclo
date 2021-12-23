@@ -1,0 +1,36 @@
+|DeslocadorEsq
+input_vector[0] => output_vector[1].DATAIN
+input_vector[1] => output_vector[2].DATAIN
+input_vector[2] => output_vector[3].DATAIN
+input_vector[3] => output_vector[4].DATAIN
+input_vector[4] => output_vector[5].DATAIN
+input_vector[5] => output_vector[6].DATAIN
+input_vector[6] => output_vector[7].DATAIN
+input_vector[7] => output_vector[8].DATAIN
+input_vector[8] => output_vector[9].DATAIN
+input_vector[9] => output_vector[10].DATAIN
+input_vector[10] => output_vector[11].DATAIN
+input_vector[11] => output_vector[12].DATAIN
+input_vector[12] => output_vector[13].DATAIN
+input_vector[13] => output_vector[14].DATAIN
+input_vector[14] => output_vector[15].DATAIN
+input_vector[15] => ~NO_FANOUT~
+w => output_vector[0].DATAIN
+output_vector[0] <= w.DB_MAX_OUTPUT_PORT_TYPE
+output_vector[1] <= input_vector[0].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[2] <= input_vector[1].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[3] <= input_vector[2].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[4] <= input_vector[3].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[5] <= input_vector[4].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[6] <= input_vector[5].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[7] <= input_vector[6].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[8] <= input_vector[7].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[9] <= input_vector[8].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[10] <= input_vector[9].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[11] <= input_vector[10].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[12] <= input_vector[11].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[13] <= input_vector[12].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[14] <= input_vector[13].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[15] <= input_vector[14].DB_MAX_OUTPUT_PORT_TYPE
+
+
